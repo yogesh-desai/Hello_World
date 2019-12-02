@@ -15,5 +15,5 @@ echo "APP_DIR" $APP_DIR
 echo "Run Golangci-lint"
 golangci-lint run ./... --skip-dirs=vendor
 
-echo "Go Test"
-go test -v -cover -race ./...
+# echo "Go Test"
+# go test -v -cover -race ./...
