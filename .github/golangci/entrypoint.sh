@@ -11,7 +11,7 @@ echo "APP_DIR" $APP_DIR
 
 cd $APP_DIR
 
-echo "Current dir" pwd
+go env
 
 echo "build"
 go build
