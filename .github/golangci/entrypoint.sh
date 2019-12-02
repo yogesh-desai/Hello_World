@@ -8,8 +8,9 @@ mkdir -p ${APP_DIR}
 cp -r ./ ${APP_DIR} && cd ${APP_DIR}
 
 echo "APP_DIR" $APP_DIR
-# echo "build"
-# make build-all
+
+echo "build"
+make build-all
 
 echo "Run Golangci-lint"
 golangci-lint run ./... --skip-dirs=vendor
