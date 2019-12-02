@@ -11,11 +11,11 @@ echo "APP_DIR" $APP_DIR
 
 echo "GO-Root: " $GOROOT
 
-echo "build"
-go build
+# echo "build"
+# go build
 
 echo "Run Golangci-lint"
-golangci-lint run ./... --skip-dirs=vendor
+golangci-lint run --skip-dirs=vendor
 
 # echo "Go Test"
 # go test -v -cover -race ./...

@@ -7,8 +7,8 @@ LABEL "com.github.actions.color"="blue"
 
 LABEL "repository"="http://github.com/yogesh-desai/Hello_World"
 LABEL "homepage"="http://github.com/yogesh-desai"
-ENV GOROOT=/go
+
 COPY entrypoint.sh /entrypoint.sh
-RUN curl -sfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh| sh -s -- -b $(go env GOPATH)/bin v1.16.0
+RUN curl -sfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh| sh -s -- -b $GOPATH/bin v1.16.0
 
 ENTRYPOINT ["/entrypoint.sh"]
