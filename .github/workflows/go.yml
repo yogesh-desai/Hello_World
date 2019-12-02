@@ -30,8 +30,11 @@ jobs:
     - name: Run Go Tests
       run: go test -v -cover -race
 
-    - name: Run golangci-lint with reviewdog
-      uses: golangci/golangci-lint@v1.16.0
+    # - name: Run golangci-lint with reviewdog
+      # uses: reviewdog/action-golangci-lint@v1.0.4
 
-  # - name: Go steps and GolangCI-lint
-          # uses: ./.github/golangci/
+    - name: Build the Docker image
+      run: docker build . --file ./.github/golangci/Dockerfile
+  
+    - name: Go steps and GolangCI-lint
+      uses: ./.github/golangci/

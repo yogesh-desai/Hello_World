@@ -9,11 +9,6 @@ cp -r ./ ${APP_DIR} && cd ${APP_DIR}
 
 echo "APP_DIR" $APP_DIR
 
-echo "GO-Root: " $GOROOT
-
-# echo "build"
-# go build
-
 echo "Run Golangci-lint"
 golangci-lint run --skip-dirs=vendor
 
