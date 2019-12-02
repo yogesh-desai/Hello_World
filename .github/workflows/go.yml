@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Set up Go 1.13
+    - name: Set up Go 1.10.4
       uses: actions/setup-go@v1
       with:
-        go-version: 1.13
+        go-version: 1.10.4
       id: go
 
     - name: Check out code into the Go module directory
@@ -31,7 +31,7 @@ jobs:
       run: go test -v -cover -race
 
     - name: Run golangci-lint with reviewdog
-      uses: golangci/golangci-lint:v1.16.0
+      uses: golangci/golangci-lint@v1.16.0
 
   # - name: Go steps and GolangCI-lint
           # uses: ./.github/golangci/
