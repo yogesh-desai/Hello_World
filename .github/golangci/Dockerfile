@@ -1,4 +1,4 @@
-FROM golang:1.10.4
+FROM golang
 
 LABEL "com.github.actions.name"="build-test"
 LABEL "com.github.actions.description"="run go test and build command"
