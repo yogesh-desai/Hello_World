@@ -30,5 +30,8 @@ jobs:
     - name: Run Go Tests
       run: go test -v -cover -race
 
-    - name: Go steps and GolangCI-lint
-      uses: ./.github/golangci/
+    - name: Run golangci-lint with reviewdog
+      uses: reviewdog/action-golangci-lint@v1.0.4
+
+  # - name: Go steps and GolangCI-lint
+          # uses: ./.github/golangci/
