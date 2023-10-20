@@ -27,11 +27,8 @@ jobs:
     - name: Build
       run: go build -v .
 
-    - name: Install GolangCI-lint
-      run: |
-        wget -c https://github.com/golangci/golangci-lint/releases/download/v1.16.0/golangci-lint-1.16.0-linux-386.tar.gz
-        tar zxf golangci-lint-1.16.0-linux-386.tar.gz
-        cp -v golangci-lint-1.16.0-linux-386/golangci-lint $GOPATH/bin/
+    - name: Run golangci-lint
+      uses: golangci/golangci-lint-action@v3.7.0
 
     - name: Run GolangCI-lint
       run: golangci-lint run ./...
